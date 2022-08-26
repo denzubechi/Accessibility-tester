@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Accessibility tester</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/bootstrap/js/bootstrap.bundle.js">
+  <title>Website Accessibility Tester</title>
+    <style>
+      body{
+        background-color: lightgrey;
+      }
+      .loader, .hideButton {
+        display: none;
+      }
+      .heading{
+        text-align:center;
+        font-family: cursive;
+      }
+      .abs-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar{
+  padding-top: -1.3rem;
+}
+.sammy{
+  text-decoration: none;
+  font-family: cursive;
+  color: #212529;
+  border-bottom: 4px solid green;
+  border-radius: 5px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- 
+13 - Navbar with text and icons
+-->
+<nav class="navbar navbar-dark navbar-expand bg-dark justify-content-center">
+  <div class="container">
+      <ul class="navbar-nav nav-justified w-100 text-center mt-1">
+          <li class="nav-item">
+              <a href="#" class="nav-link d-flex flex-column" data-toggle="collapse">
+                <a href="https://github.com/denzubechi/Accessibility-tester"><i class="fa-brands fa-github"></i></a>
+                  <span class="d-none d-sm-inline mt-1" style="color:white">Link to repo</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a href="#" class="nav-link d-flex flex-column" data-toggle="collapse">
+                <a href="https://github.com/denzubechi/Accessibility-tester"><i class="fa fa-code-fork" aria-hidden="true"></i></a>
+                  <span class="d-none d-sm-inline mt-1" style="color:white">Fork this repo</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a href="#" class="nav-link d-flex flex-column" data-toggle="collapse">
+                <a href="https://github.com/denzubechi/Accessibility-tester"> <i class="fa-solid fa-star"></i></a>
+                  <span class="d-none d-sm-inline mt-1" style="color:white">Star this repo</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a href="#" class="nav-link d-flex flex-column" data-toggle="collapse">
+                <a href="https://Linkedin.com/in/samuel-nzubechi"><i class="fa-brands fa-linkedin"></i></a>
+                  <span class="d-none d-sm-inline mt-1"style="color:white">Linkedin</span>
+              </a>
+          </li>
+      </ul>
+  </div>
+</nav>
+    <h1 class="heading"><a href="https://github.com/denzubechi" class="sammy"style="margin-top: 3rem;">@Denzubechi</a></h1>
+    <div class="container-sm">
+      <div class="card my-5 p-3 bg-dark text-light">
+        <div class="card-body">
+          <h2 class="mb-3">Website Accessibility Tester</h2>
+          <form id="form">
+            <div class="input-group mb-3">
+              <input
+                type="url"
+                id="url"
+                class="form-control"
+                placeholder="Enter a website..."
+              />
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+              <button id="clearResults" class="btn btn-danger hideButton">Clear Results</button>
+              <button id="csvBtn" class="btn btn-warning hideButton">Download Csv</button>
+        </div>
+      </div>
+
+      <div class="loader text-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <div id="number"></div>
+      <div id="issues"></div>
+    </div>
+
+    <div style="text-align: center;"> &copy; Samuel Nzubechi</div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
